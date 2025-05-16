@@ -10,7 +10,7 @@ export function LogoutButton() {
   return (
     <>
       <button
-        className={styles.button}
+        className="text-white"
         onClick={async () => {
           await logoutMutation()
           router.refresh()
