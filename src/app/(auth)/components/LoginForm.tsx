@@ -95,7 +95,7 @@ export const LoginForm = (props: LoginFormProps) => {
       </Form>
 
       <div className="mt-6 text-center text-sm text-gray-400">
-        Don't have an account?{" "}
+        Dont have an account?{" "}
         <Link 
           href="/signup" 
           className="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center justify-center gap-1"
