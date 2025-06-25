@@ -55,6 +55,7 @@ const date = new Date(startDate)
 
   const checkPointSubmit = async (values:any) => {
     try{
+      console.log(values)
       const progress = await createProgressMutation(values)
       
       
@@ -84,8 +85,10 @@ const date = new Date(startDate)
               log_date: selectedDay,
               skillId: selectedSkillId,
               note: '',
+              isChecked:true
             }}
             onSubmit={(values) => {
+              
               checkPointSubmit(values)
               setIsModalOpen(false)
             }}

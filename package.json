@@ -36,6 +36,7 @@
     "dayjs": "1.11.13",
     "formik": "2.4.6",
     "jscodeshift": "17.3.0",
+    "motion": "12.19.1",
     "next": "15.0.1",
     "postcss": "8.5.3",
     "prisma": "5.4.2",
