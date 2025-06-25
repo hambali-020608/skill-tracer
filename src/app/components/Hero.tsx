@@ -9,8 +9,7 @@ export default function Hero(){
     <div>
       <h1 className="text-5xl text-white font-bold">Master New Skills</h1>
       <p className="py-6 text-white max-w-xl ">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-        quasi. In deleniti eaque aut repudiandae et a id nisi.
+   Manage your skill development with Skill Tracer, and learn each skill with the help of a smart chatbot.
       </p>
       <button className="btn btn-success">Get Started</button>
     </div>
