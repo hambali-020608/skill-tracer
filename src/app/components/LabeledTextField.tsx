@@ -9,7 +9,7 @@ export interface LabeledTextFieldProps extends PropsWithoutRef<React.JSX.Intrins
   labelClass:string
   // className: string
   /** Field type. Doesn't include radio buttons and checkboxes */
-  type?: "text" | "password" | "email" | "number" | "date" 
+  type?: "text" | "password" | "email" | "number" | "date" | "datetime-local" | 'datetime'
   outerProps?: PropsWithoutRef<React.JSX.IntrinsicElements["div"]>
 }
 

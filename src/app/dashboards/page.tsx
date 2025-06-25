@@ -3,10 +3,13 @@ import { useState } from 'react';
 import {  FiMenu } from 'react-icons/fi';
 import SideBar from './components/SideBar';
 import { Dashboard } from './components/Dashboard';
+import getCurrentUser from '../users/queries/getCurrentUserSkill';
+import { useQuery } from '@blitzjs/rpc';
 
 const Page = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [activeTab, setActiveTab] = useState('dashboard');
+  const [user] = useQuery(getCurrentUser,null)
   
   return (
     <div className="flex h-screen bg-gray-900 text-gray-100 overflow-hidden">
@@ -36,7 +39,7 @@ const Page = () => {
         </header>
 
         {/* Dashboard Content */}
-        <Dashboard/>
+        <Dashboard Skills={user?.Skill}/>
       </div>
     </div>
   );

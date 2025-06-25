@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { FiHome, FiTrendingUp, FiTarget, FiBarChart2, FiSettings, FiLogOut, FiMenu, FiX, FiAward, FiCalendar, FiClock } from 'react-icons/fi';
-
+import {LuBot} from "react-icons/lu"
 export default function SideBar({sidebarOpen,setSidebarOpen}:any){
     //  const [sidebarOpen, setSidebarOpen] = useState(true);
      const [activeTab, setActiveTab] = useState('dashboard');
@@ -31,6 +31,8 @@ export default function SideBar({sidebarOpen,setSidebarOpen}:any){
                 { icon: <FiHome />, name: 'Dashboard', id: 'dashboard',  to:'/dashboards'},
                 { icon: <FiTrendingUp />, name: 'Progress', id: 'progress' ,to:'/progress'},
                 { icon: <FiTarget />, name: 'Goals', id: 'goals',to:'skills' },
+                { icon: <LuBot />, name: 'ChatBot', id: 'chatbot',to:'/chatbots' },
+
                 // { icon: <FiBarChart2 />, name: 'Analytics', id: 'analytics' },
                 // { icon: <FiAward />, name: 'Achievements', id: 'achievements' },
                 // { icon: <FiSettings />, name: 'Settings', id: 'settings' },

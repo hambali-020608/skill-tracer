@@ -29,7 +29,11 @@ ChartJS.register(
 
 // import getDashboard from "../queries/getDashboard";
 
-export const Dashboard = () => {
+export const Dashboard = ({Skills}:any) => {
+  const calculateProgress = (skill: any) => {
+    return Math.floor((skill.Progress.length / skill.totalDays) * 100);
+  };
+
   
   const router = useRouter();
   const skills = [
@@ -39,7 +43,7 @@ export const Dashboard = () => {
       { name: 'Node.js', progress: 45, hours: 22, lastPracticed: '5 days ago' },
     ];
   
-    const totalSkills = skills.length;
+    const totalSkills = Skills.length;
     const totalHours = skills.reduce((sum, skill) => sum + skill.hours, 0);
     const averageProgress = skills.reduce((sum, skill) => sum + skill.progress, 0) / totalSkills;
   
@@ -76,9 +80,6 @@ export const Dashboard = () => {
       ],
     };
   
-  // const [deleteDashboardMutation] = useMutation(deleteDashboard);
-  // const [dashboard] = useQuery(getDashboard, { id: dashboardId });
-
   return (
     <>
       <main className="flex-1 overflow-y-auto p-6 bg-gray-900/50">
@@ -197,23 +198,25 @@ export const Dashboard = () => {
                     <FiAward className="mr-2 text-green-400" /> Your Skills Progress
                   </h3>
                   <div className="space-y-6">
-                    {skills.map((skill, index) => (
+                    {Skills.map((skill, index) => (
+
                       <div key={index}>
+
                         <div className="flex justify-between mb-2">
-                          <span className="font-medium">{skill.name}</span>
-                          <span className="text-green-400">{skill.progress}%</span>
+                          <span className="font-medium">{skill.skillName}</span>
+                          <span className="text-green-400">{calculateProgress(skill)}%</span>
                         </div>
                         <div className="w-full bg-gray-700 rounded-full h-2.5">
                           <div 
                             className="bg-green-500 h-2.5 rounded-full" 
-                            style={{ width: `${skill.progress}%` }}
+                            style={{ width: `${calculateProgress(skill)}%` }}
                           ></div>
                         </div>
                         <div className="flex justify-between mt-2 text-sm text-gray-400">
                           <span className="flex items-center">
-                            <FiClock className="mr-1" /> {skill.hours} hours
+                            <FiClock className="mr-1" /> {skill.totalDays} Days
                           </span>
-                          <span>Last practiced: {skill.lastPracticed}</span>
+                          {/* <span>Last practiced: {skill.lastPracticed}</span> */}
                         </div>
                       </div>
                     ))}

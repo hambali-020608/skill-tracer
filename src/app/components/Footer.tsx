@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-gray-100">
-              Skill<span className="text-indigo-400">Track</span>
+              Skill<span className="text-green-400">Track</span>
             </h3>
             <p className="text-gray-400">
               Master your skills with our advanced tracking and analytics platform.
