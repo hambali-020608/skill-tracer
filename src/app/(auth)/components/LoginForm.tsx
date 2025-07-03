@@ -61,7 +61,7 @@ export const LoginForm = (props: LoginFormProps) => {
             name="email"
             label="Email"
             placeholder="your@email.com"
-            leftIcon={<FiMail className="text-gray-400" />}
+            
             className="bg-gray-700 border-gray-600 focus:ring-indigo-500 focus:border-indigo-500"
           />
           
@@ -70,7 +70,7 @@ export const LoginForm = (props: LoginFormProps) => {
             label="Password"
             placeholder="••••••••"
             type="password"
-            leftIcon={<FiLock className="text-gray-400" />}
+            
             className="bg-gray-700 border-gray-600 focus:ring-indigo-500 focus:border-indigo-500"
           />
 
