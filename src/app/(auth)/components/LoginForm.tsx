@@ -100,7 +100,7 @@ export const LoginForm = (props: LoginFormProps) => {
           href="/signup" 
           className="text-indigo-400 hover:text-indigo-300 transition-colors flex items-center justify-center gap-1"
         >
-          Sign up <FiUserPlus className="inline" />
+          Sign up 
         </Link>
       </div>
     </div>
