@@ -30,7 +30,7 @@ export const LoginForm = (props: LoginFormProps) => {
       <Form
         submitText={
           <div className="flex items-center justify-center gap-2">
-            Login <FiArrowRight />
+            Login
           </div>
         }
         schema={Login}
